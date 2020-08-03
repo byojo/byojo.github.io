@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-03T15:40:16.294Z</updated>
+  <updated>2020-08-03T15:51:49.307Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/08/03/%E4%B8%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0/"/>
     <id>http://yoursite.com/2020/08/03/%E4%B8%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0/</id>
     <published>2020-08-03T15:40:16.294Z</published>
-    <updated>2020-08-03T15:40:16.294Z</updated>
+    <updated>2020-08-03T15:51:49.307Z</updated>
     
     <content type="html"><![CDATA[<p>//给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。<br>//<br>//<br>//<br>// 提示：<br>//<br>//<br>// num1 和num2 的长度都小于 5100<br>// num1 和num2 都只包含数字 0-9<br>// num1 和num2 都不包含任何前导零<br>// 你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式<br>//<br>// Related Topics 字符串</p><p>class Solution {<br>    public String addStrings(String num1, String num2) {<br>        int index1 = num1.length() - 1;<br>        int index2 = num2.length() - 1;<br>        int add = 0;<br>        StringBuffer stringBuffer = new StringBuffer();<br>        while (index1 &gt;= 0 || index2 &gt;= 0 || add != 0) {<br>            int x = index1 &gt;= 0 ? num1.charAt(index1) - ‘0’ : 0;<br>            int y = index2 &gt;= 0 ? num2.charAt(index2) - ‘0’ : 0;<br>            int target = x + y + add;<br>            stringBuffer.append(target%10);<br>            add = target / 10;<br>            index1–;<br>            index2–;<br>        }<br>        stringBuffer.reverse();<br>        return stringBuffer.toString();<br>    }<br>}</p>]]></content>
     
