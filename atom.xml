@@ -38,51 +38,23 @@
   </entry>
   
   <entry>
-    <title>Test</title>
+    <title>两字符串相加</title>
     <link href="http://yoursite.com/2020/08/03/%E4%B8%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0/"/>
     <id>http://yoursite.com/2020/08/03/%E4%B8%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0/</id>
     <published>2020-08-03T15:40:16.294Z</published>
-    <updated>2020-08-03T15:51:49.307Z</updated>
+    <updated>2020-08-07T14:11:07.725Z</updated>
     
-    <content type="html"><![CDATA[<p>//给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。<br>//<br>//<br>//<br>// 提示：<br>//<br>//<br>// num1 和num2 的长度都小于 5100<br>// num1 和num2 都只包含数字 0-9<br>// num1 和num2 都不包含任何前导零<br>// 你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式<br>//<br>// Related Topics 字符串</p><p>class Solution {<br>    public String addStrings(String num1, String num2) {<br>        int index1 = num1.length() - 1;<br>        int index2 = num2.length() - 1;<br>        int add = 0;<br>        StringBuffer stringBuffer = new StringBuffer();<br>        while (index1 &gt;= 0 || index2 &gt;= 0 || add != 0) {<br>            int x = index1 &gt;= 0 ? num1.charAt(index1) - ‘0’ : 0;<br>            int y = index2 &gt;= 0 ? num2.charAt(index2) - ‘0’ : 0;<br>            int target = x + y + add;<br>            stringBuffer.append(target%10);<br>            add = target / 10;<br>            index1–;<br>            index2–;<br>        }<br>        stringBuffer.reverse();<br>        return stringBuffer.toString();<br>    }<br>}</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="每日算法：字符串相加"><a href="#每日算法：字符串相加" class="headerlink" title="每日算法：字符串相加"></a>每日算法：字符串相加</h2><p>leetcode: <a href="https://leetcode-cn.com/problems/add-strings/">https://leetcode-cn.com/problems/add-strings/</a></p><a id="more"></a><h6 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。 </span><br><span class="line"> </span><br><span class="line">提示： </span><br><span class="line">    num1 和num2 的长度都小于 5100 </span><br><span class="line">    num1 和num2 都只包含数字 0-9 </span><br><span class="line">    num1 和num2 都不包含任何前导零 </span><br><span class="line">    你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式  </span><br><span class="line">    Related Topics 字符串</span><br></pre></td></tr></table></figure><h6 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public String addStrings(String num1, String num2) &#123;</span><br><span class="line">        int index1 &#x3D; num1.length() - 1;</span><br><span class="line">        int index2 &#x3D; num2.length() - 1;</span><br><span class="line">        int add &#x3D; 0;</span><br><span class="line">        StringBuffer stringBuffer &#x3D; new StringBuffer();</span><br><span class="line">        while (index1 &gt;&#x3D; 0 || index2 &gt;&#x3D; 0 || add !&#x3D; 0) &#123;</span><br><span class="line">            int x &#x3D; index1 &gt;&#x3D; 0 ? num1.charAt(index1) - &#39;0&#39; : 0;</span><br><span class="line">            int y &#x3D; index2 &gt;&#x3D; 0 ? num2.charAt(index2) - &#39;0&#39; : 0;</span><br><span class="line">            int target &#x3D; x + y + add;</span><br><span class="line">            stringBuffer.append(target%10);</span><br><span class="line">            add &#x3D; target &#x2F; 10;</span><br><span class="line">            index1--;</span><br><span class="line">            index2--;</span><br><span class="line">        &#125;</span><br><span class="line">        stringBuffer.reverse();</span><br><span class="line">        return stringBuffer.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;//给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。&lt;br&gt;//&lt;br&gt;//&lt;br&gt;//&lt;br&gt;// 提示：&lt;br&gt;//&lt;br&gt;//&lt;br&gt;// num1 和num2 的长度都小于 5100&lt;br&gt;// num1 和num2 都只包含数字 0-9&lt;br&gt;
-      
+      &lt;h2 id=&quot;每日算法：字符串相加&quot;&gt;&lt;a href=&quot;#每日算法：字符串相加&quot; class=&quot;headerlink&quot; title=&quot;每日算法：字符串相加&quot;&gt;&lt;/a&gt;每日算法：字符串相加&lt;/h2&gt;&lt;p&gt;leetcode: &lt;a href=&quot;https://leetcode-cn.com/problems/add-strings/&quot;&gt;https://leetcode-cn.com/problems/add-strings/&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
     
     
       <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2020/08/02/hello-world/"/>
-    <id>http://yoursite.com/2020/08/02/hello-world/</id>
-    <published>2020-08-02T03:02:22.450Z</published>
-    <updated>2020-08-03T23:49:11.272Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><a id="more"></a><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   
